@@ -7,9 +7,9 @@ let arraySeleccion = [];
 window.onload = () => {
 	getCategories().then((resp) => renderBtns(resp));//nos devuelve el array que hemso llamado
 	container = document.getElementsByClassName('categories')[0];//le asignamos al  boton 
-    newJokeBtn = document.getElementsByClassName("btn-newJoke")[0];
+    newJokeBtn = document.getElementsByClassName("create__btn-newJoke")[0];
     newJokeBtn.addEventListener('click', () => { nuevoChiste()});
-    containerJoke = document.getElementsByClassName("container-joke")[0];
+    containerJoke = document.getElementsByClassName("joke__container-joke")[0];
 };
 
 async function getCategories() { //hacemos una funcion asincrona para llamar a la web y nos devuvla el array
@@ -44,7 +44,7 @@ let pulsarBoton = (index, resp) => { //Con esta funcion detectamos si esta selec
   console.log(arraySeleccion)
 }
 
-let nuevoChiste = () => {
+let nuevoChiste = () => { // 
     let categoriesString = arraySeleccion.join(',')
     getNewJoke(categoriesString).then((resp) => printJoke(resp))
 }

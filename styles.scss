@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/Montserrat-Regular.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("assets/fonts/Montserrat-Bold.ttf");
+  font-weight: 500;
+  font-style: Bold;
+}
+@import "__variables";
+@import "__mixins";
+
+body {
+  font-family: "Montserrat";
+}
+
+.header {
+  &__title {
+    font-family: "Montserrat Bold";
+    font-size: 20px;
+    color: $color1;
+    background-color: $color2;
+    text-align: center;
+    padding: 15px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+.categories {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.category-button {
+  border: 1px solid $color7;
+  color: $color6;
+  padding: 10px 30px;
+  background-color: $color4;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 5px;
+}
+.category-button:hover {
+  border: 1px solid $color1;
+  color: $color5;
+  background-color: $color2;
+}
+
+.create {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: row;
+
+  &__btn-reset {
+    border: none;
+    color: $color2;
+    background-color: $color4;
+    padding: 10px 30px;
+  }
+
+  &__btn-reset:hover {
+    color: $color5;
+    background-color: $color2;
+  }
+
+  &__btn-newJoke {
+    border: none;
+    color: $color2;
+    background-color: white;
+    padding: 10px 30px;
+  }
+
+  &__btn-newJoke:hover {
+    color: $color5;
+    background-color: $color2;
+  }
+}
+
+.joke {
+  background-color: $color2;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding-bottom: 30px;
+
+  &__container-joke {
+    font-size: 20px;
+    font-family: "Montserrat Bold";
+    color: $color1;
+    text-align: center;
+    padding: 15px;
+  }
+
+  &__img {
+    width: 300px;
+    padding-top: 30px;
+  }
+}
